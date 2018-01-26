@@ -198,14 +198,12 @@ def intercept(arr, length):
         toz = read_len - length
         if k - stp > enp - k:
             for j in range(stp, stp+toz+1):
-                arr[i][j][0] = 0
-                arr[i][j][1] = 0
-                arr[i][j][2] = 0
+                for t in range(channels):
+                    arr[i][j][t] = 0
         else:
             for j in range(enp-toz, enp+1):
-                arr[i][j][0] = 0
-                arr[i][j][1] = 0
-                arr[i][j][2] = 0
+                for t in range(channels):
+                    arr[i][j][t] = 0
     return arr
 
 def savefile(path, list_name, y, data, id, chr):
