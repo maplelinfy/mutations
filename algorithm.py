@@ -1,3 +1,4 @@
+# Mutations detection by some characteristic
 from keras.layers.normalization import BatchNormalization
 from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.ensemble import RandomForestClassifier
