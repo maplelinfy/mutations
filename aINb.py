@@ -1,3 +1,4 @@
+# Judge the relationship between arr_a and arr_b
 
 #arr should be the form [[chr, pos], [chr, pos]...]
 def a_in_b(arr_a, arr_b):
