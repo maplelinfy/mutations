@@ -1,4 +1,4 @@
-#bamToPic
+#BamToPic in deepvariant
 import numpy as np
 import random
 import pysam
