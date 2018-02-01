@@ -1,4 +1,4 @@
-
+# Read the reference by chr
 ref_file = '/data/linfengye/snpdata/hg19/hg19.fasta'
 data_file = '/home/linfengye/mutations/data/data_new/NA12878.mutations'
 width = 221
