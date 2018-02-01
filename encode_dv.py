@@ -1,4 +1,4 @@
-#BamToPic in deepvariant
+#Generate training data in deepvariant, from bam and canditate mutation sites to matrix with size [100, 221, 7].
 import numpy as np
 import random
 import pysam
