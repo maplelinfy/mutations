@@ -252,7 +252,8 @@ def genReadArr(pic_start, pic_end, start_point, k, base, base_q, read_q, ref, st
     return read_arr
 
 def genReadMatrix(bam_file, chr, k, mut_type, alt):
-    arr = arrtemp = []
+    arr = []
+    arrtemp = []
     arr_ref = [0] * width
     for read in bam_file.fetch(chr, k, k + 1):
         start_point = read.pos
@@ -298,7 +299,9 @@ def genReadMatrix(bam_file, chr, k, mut_type, alt):
 def code(bam_file, mut_file, data_path):
     id = 1
     chr_pre = 'chr'
-    name = data = y = []
+    name = []
+    data = []
+    y = []
     bam_file = pysam.AlignmentFile(bam_file, "rb")
     sf = open(mut_file, 'r')
     while True:
@@ -312,7 +315,9 @@ def code(bam_file, mut_file, data_path):
         if chr != chr_pre:
             saveFile(data_path, name, y, data, id, chr_pre)
             id = 1
-            name = data = y = []
+            name = []
+            data = []
+            y = []
         k = int(strr[1]) - 1
         ref = strr[2]
         alt = strr[3]
@@ -335,7 +340,9 @@ def code(bam_file, mut_file, data_path):
         if len(data) == max_num_per_file:
             saveFile(data_path, name, y, data, id, chr_pre)
             id += 1
-            name = data = y = []
+            name = []
+            data = []
+            y = []
     if len(data) != 0:
         saveFile(data_path, name, y, data, id, chr_pre)
     sf.close()
