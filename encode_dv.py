@@ -1,9 +1,11 @@
 
 # -*- coding: utf-8 -*-
-# deepvariant图片生成流程输入：
-# 1> bam文件以及对应bai文件
-# 2> 候选突变位点文件，前四列依次为染色体，位置，ref（长度为1），alt（indel用+-序列表示），最后一列为标签纯合=2，杂合=1，正常=0
-# 3> 数据输出路径，因天河THL4单节点内存有限，每个文件最多只能存max_num_per_file个位点数据
+"""
+deepvariant图片生成流程输入：
+1> bam文件以及对应bai文件
+2> 候选突变位点文件，前四列依次为染色体，位置，ref（长度为1），alt（indel用+-序列表示），最后一列为标签纯合=2，杂合=1，正常=0
+3> 数据输出路径，因天河THL4单节点内存有限，每个文件最多只能存max_num_per_file个位点数据
+"""
 
 import numpy as np
 import random
