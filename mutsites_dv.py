@@ -1,4 +1,11 @@
 
+# -*- coding: utf-8 -*-
+"""
+deepvariant候选突变位点生成流程：
+输入：多线程核心数，样本id
+输出：{id}.mutations文件
+"""
+
 from multiprocessing import Pool
 import pysam
 import time
