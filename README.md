@@ -1,5 +1,5 @@
 # mutations
-aInb：判断两数组关系
+aInb：判断两数组关系＜/br＞
 algorithm：根据突变位点特征判断突变
 mutsites_dv：从bam文件中提取候选突变位点
 encode_dv：生成候选突变位点的图像数据
