@@ -34,7 +34,7 @@ def getRef(poi_list):
     ref = ''
     ref_list = []
     chrr = -1
-    f = open(ref_file)
+    f = open(ref_file, 'r')
     while True:
         line = f.readline()
         if not line: break
