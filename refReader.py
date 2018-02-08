@@ -37,7 +37,7 @@ def getRef(poi_list):
     flag = 0
     size_list = []
 
-    f = open(ref_file)
+    f = open(ref_file, 'r')
     while True:
         line = f.readline()
         if not line: break
