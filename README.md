@@ -3,9 +3,10 @@
 Deepvariant相关：  
 mutsites_dv：从bam文件中提取候选突变位点  
 addRef_dv：给候选突变位点加上图片覆盖的ref，顺便提供bam文件中部分位点缺失的del区域ref序列  
-encode_dv：生成候选突变位点的图像数据  
-train_dv：训练以及验证  
-inceptionV3：train_dv中的CNN部分  
+addLabel_dv：训练使用，按金标准将候选位点分为阴性和阳性，并加上标签  
+encode_dv：生成候选突变位点的图像数据  
+train_dv：训练以及验证  
+inceptionV3：train_dv中的CNN部分  
   
   其他：  
 aInb：判断两数组关系  
