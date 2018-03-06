@@ -124,7 +124,9 @@ def updateSites(sites, chr, start_point, base, base_q, ref, cigar):
                 del_part = '-'
                 del_len = 1
                 mut_pos = i - 1
-                if mut_pos < 0: continue
+                if mut_pos < 0:
+                    i += 1
+                    continue
                 while i + 1 < len(base) and base[i+1] == '-':
                     del_len += 1
                     i += 1
@@ -138,7 +140,9 @@ def updateSites(sites, chr, start_point, base, base_q, ref, cigar):
                 in_part = base[i].upper()
                 in_len = 1
                 mut_pos = i - 1
-                if mut_pos < 0: continue
+                if mut_pos < 0:
+                    i += 1
+                    continue
                 while i + 1 < len(base) and ref[i+1] == '*':
                     in_len += 1
                     i += 1
