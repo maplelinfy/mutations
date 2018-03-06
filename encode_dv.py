@@ -37,7 +37,7 @@ base_mismatch_value = int(max_pixel*0.6)
 base_quality_filter = 10
 mapping_quality_filter = 10
 read_count_filter = 1
-max_num_per_file = 4000
+max_num_per_file = 10000
 
 """
 n个数中随机选取nd个数，返回选取的这nd个数的list
@@ -305,7 +305,8 @@ def genReadMatrix(bam_file, chr, k, mut_type, alt):
         start_point = read.pos
         base_q = read.query_alignment_qualities
         read_q = int(read.mapping_quality)
-        if read.cigarstring == None or read_q < mapping_quality_filter or base_q[k-start_point] < base_quality_filter: continue
+        if read.cigarstring == None or read_q < mapping_quality_filter: continue
+        # base_q[k-start_point] < base_quality_filter
         base = read.query_alignment_sequence.upper()
         ref = read.get_reference_sequence().upper()
         strand = read.is_reverse
